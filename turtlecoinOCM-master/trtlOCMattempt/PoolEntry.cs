@@ -38,7 +38,7 @@ namespace trtlOCM
         {
             WebClient webCl = new WebClient();
             webCl.DownloadStringCompleted += new DownloadStringCompletedEventHandler(setStats);
-            if (!api.Contains(""))
+            if (api.Contains("http"))
             { 
                 webCl.DownloadStringAsync(new Uri(api));
             } else
@@ -62,35 +62,17 @@ namespace trtlOCM
                 {
                     ping = -1;
                     pingLbl.Text = "timeout";
-
-                    try
-                    {
-                        this.Parent.Controls.Remove(this);
-                    }
-                    catch { }
                 }
                 else
                 {
                     ping = -1;
                     pingLbl.Text = "?";
-
-                    try
-                    {
-                        this.Parent.Controls.Remove(this);
-                    }
-                    catch { }
                 }
             }
             catch (Exception e)
             {
                 ping = -1;
                 pingLbl.Text = "?";
-
-                try
-                {
-                    this.Parent.Controls.Remove(this);
-                }
-                catch { }
             }
         }
         
