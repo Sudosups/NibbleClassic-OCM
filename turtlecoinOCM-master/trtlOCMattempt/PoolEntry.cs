@@ -40,7 +40,7 @@ namespace trtlOCM
             webCl.DownloadStringCompleted += new DownloadStringCompletedEventHandler(setStats);
             if (!api.Contains(""))
             { 
-                webCl.DownloadStringAsync(new Uri(api + "stats"));
+                webCl.DownloadStringAsync(new Uri(api));
             } else
             {
                 payoutLbl.Text = "?";
