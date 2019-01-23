@@ -1,0 +1,11 @@
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\trtlOCM.csprojAssemblyReference.cache
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\trtlOCM.Form1.resources
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\trtlOCM.PoolEntry.resources
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\trtlOCM.csproj.GenerateResource.cache
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\trtlOCM.csproj.CoreCompileInputs.cache
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\bin\Debug\NibbleBox.exe.config
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\bin\Debug\NibbleBox.exe
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\bin\Debug\NibbleBox.pdb
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\NibbleBox.exe
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\NibbleBox.pdb
+D:\Development\OCM\turtlecoinOCM-master\trtlOCMattempt\obj\Debug\trtlOCM.Properties.Resources.resources
