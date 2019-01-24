@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -40,7 +40,7 @@ namespace trtlOCM
             webCl.DownloadStringCompleted += new DownloadStringCompletedEventHandler(setStats);
             if (api.Contains("http"))
             { 
-                webCl.DownloadStringAsync(new Uri(api));
+                webCl.DownloadStringAsync(new Uri(api + "stats"));
             } else
             {
                 payoutLbl.Text = "?";
@@ -62,17 +62,35 @@ namespace trtlOCM
                 {
                     ping = -1;
                     pingLbl.Text = "timeout";
+
+                    try
+                    {
+                        this.Parent.Controls.Remove(this);
+                    }
+                    catch { }
                 }
                 else
                 {
                     ping = -1;
                     pingLbl.Text = "?";
+
+                    try
+                    {
+                        this.Parent.Controls.Remove(this);
+                    }
+                    catch { }
                 }
             }
             catch (Exception e)
             {
                 ping = -1;
                 pingLbl.Text = "?";
+
+                try
+                {
+                    this.Parent.Controls.Remove(this);
+                }
+                catch { }
             }
         }
         
@@ -206,3 +224,4 @@ namespace trtlOCM
         }
     }
 }
+
