@@ -15,8 +15,7 @@ NibbleBox is a GUI for the cryptonight mining software `xmrig` by @psychocrypt `
 ## Planned features/steps
 * ~~Integrate pool statistics~~ 
 * ~~Select multiple pools under additional consideration of e.g. pool hashrate~~ 
-* Implement/enable all available advanced options for xmr-stak
-* Clean up the code and use best practices
+* Implement/enable all available advanced options for xmr-stak 
 
 
 ## How to build
@@ -40,7 +39,8 @@ Folder structure from where the NibbleBox is placed:
     * xmr-stak.exe *(alongside all other necessary files)*
 
 
-## Support this little project!
+## Credits
 Coded by EncryptedUnicorn for Turtlecoin
 
 Modified by The Nibble Developers
+
