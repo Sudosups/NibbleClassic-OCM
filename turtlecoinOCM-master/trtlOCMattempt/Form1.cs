@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -127,7 +127,7 @@ namespace trtlOCM
 
                     //foreach (PoolEntry pe in poolListPanel.Controls)
                     //{
-                    //    pe.selectedCb.Enabled = false;
+                    //    pe.selectedCb.Enabled = true;
                     //    if (pe.getPing() != -1) pingAvg = pingAvg == 0 ? pe.getPing() : (pingAvg + pe.getPing()) / 2;
                     //}
 
@@ -330,14 +330,41 @@ namespace trtlOCM
 
                 switch (hardwareCb.Text)
                 {
-                    case "Low end":
+                    case "Low NBX":
                         chosenPort = ":3333";
                         break;
-                    case "Mid range":
+		    case "Low Llama&Horse":
+                        chosenPort = ":10103";
+                        break;
+		    case "Low Hackerknowledge":
+                        chosenPort = ":5151";
+                        break;
+		    case "Low Cryptonight.mine":
+                        chosenPort = ":3332";
+                        break;
+		    case "Mid NBX":
+                        chosenPort = ":4444";
+                        break;
+                    case "Mid Llama&Horse":
+                        chosenPort = ":10104";
+                        break;
+                    case "Mid Hackerknowledge":
+                        chosenPort = ":5252";
+                        break;
+		    case "Mid Cryptonight.mine":
+                        chosenPort = ":4442";
+                        break;
+                    case "High NBX":
                         chosenPort = ":5555";
                         break;
-                    case "High end":
-                        chosenPort = ":7777";
+                    case "High Llama&Horse":
+                        chosenPort = ":10105";
+                        break;
+                    case "High Hackerknowledge":
+                        chosenPort = ":5353";
+                        break;
+		    case "High Cryptonight.mine":
+                        chosenPort = ":5552";
                         break;
                     default:
                         chosenPort = ":3333";
