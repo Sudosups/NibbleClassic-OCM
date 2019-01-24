@@ -369,12 +369,21 @@ namespace trtlOCM
             // 
             this.hardwareCb.FormattingEnabled = true;
             this.hardwareCb.Items.AddRange(new object[] {
-            "Low end",
-            "Mid range",
-            "High end"});
-            this.hardwareCb.Location = new System.Drawing.Point(413, 49);
+            "Low NBX",
+	    "Low Llama&Horse",
+	    "Low Hackerknowledge",
+	    "Low Cryptonight.mine",
+            "Mid NBX",
+	    "Mid Llama&Horse",
+	    "Mid Hackerknowledge",
+	    "Mid Cryptonight.mine",
+	    "High NBX",
+            "High Llama&Horse",
+	    "High Hackerknowledge",
+	    "High Cryptonight.mine",});
+            this.hardwareCb.Location = new System.Drawing.Point(350, 49);
             this.hardwareCb.Name = "hardwareCb";
-            this.hardwareCb.Size = new System.Drawing.Size(102, 28);
+            this.hardwareCb.Size = new System.Drawing.Size(180, 28);
             this.hardwareCb.TabIndex = 6;
             this.hardwareCb.Text = "Low end";
             this.hardwareCb.SelectedIndexChanged += new System.EventHandler(this.hardwareCb_SelectedIndexChanged);
@@ -382,11 +391,11 @@ namespace trtlOCM
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(300, 52);
+            this.label4.Location = new System.Drawing.Point(240, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Hardware Type:";
+            this.label4.Text = "Match Hardware/Pool with pool selection:";
             // 
             // addressTb
             // 
@@ -942,7 +951,7 @@ namespace trtlOCM
             "higher hashrate",
             "lower fee",
 	    "higher fee",
-            "manual selection"});
+	    "manual selection"});
             this.selectionModeCb.Location = new System.Drawing.Point(147, 380);
             this.selectionModeCb.Name = "selectionModeCb";
             this.selectionModeCb.Size = new System.Drawing.Size(155, 28);
@@ -996,7 +1005,7 @@ namespace trtlOCM
             this.label10.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.label10.Size = new System.Drawing.Size(75, 31);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Pools";
+            this.label10.Text = "Pool selection";
             // 
             // linkLabel4
             // 
