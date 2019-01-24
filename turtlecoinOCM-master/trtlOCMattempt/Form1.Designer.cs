@@ -1,4 +1,4 @@
-﻿namespace trtlOCM
+namespace trtlOCM
 {
     partial class Form1
     {
@@ -935,12 +935,19 @@
             this.selectionModeCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.selectionModeCb.FormattingEnabled = true;
             this.selectionModeCb.Items.AddRange(new object[] {
+	    "lower ping",
+            "smaller payouts",
+            "larger payouts",
+            "lower hashrate",
+            "higher hashrate",
+            "lower fee",
+	    "higher fee",
             "manual selection"});
             this.selectionModeCb.Location = new System.Drawing.Point(147, 380);
             this.selectionModeCb.Name = "selectionModeCb";
             this.selectionModeCb.Size = new System.Drawing.Size(155, 28);
             this.selectionModeCb.TabIndex = 6;
-            this.selectionModeCb.Text = "Manual Selection";
+            this.selectionModeCb.Text = "lower ping";
             this.selectionModeCb.SelectedIndexChanged += new System.EventHandler(this.AnalyzePoolsByCondition);
             // 
             // label12
