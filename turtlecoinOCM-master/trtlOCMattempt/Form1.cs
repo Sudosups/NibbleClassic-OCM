@@ -65,7 +65,7 @@ namespace trtlOCM
             {
                 if (poolInfo[0] != "" && poolInfo[1] != "")
                 {
-                    PoolEntry entryElement = new PoolEntry(poolInfo[0], poolInfo[1], poolInfo[2]);
+                    PoolEntry entryElement = new PoolEntry(poolInfo[0], poolInfo[1], poolInfo[2], poolInfo[3], poolInfo[4], poolInfo[5]);
                     entryElement.setAutoUpdate(poolStatsUpdateCb.Checked);
                     entryElement.selectedCb.Enabled = selectionModeCb.Text == "manual selection" ? true : false;
 
@@ -76,6 +76,12 @@ namespace trtlOCM
                 }
             }
 
+            foreach (PoolEntry pe in poolListPanel.Controls)
+            {
+                pe.UpdateStats();
+            }
+
+         
             startBtn.Enabled = true;
             startBtn.Text = "Start mining!";
         }
@@ -90,11 +96,14 @@ namespace trtlOCM
                 // can only support forknote pools this way
                 if (poolInfoEntry.Contains("url") && poolInfoEntry.Contains("api") && poolInfoEntry.Contains("forknote"))
                 { 
-                    string[] pool = new string[3];
+                    string[] pool = new string[6];
 
                     pool[0] = poolInfoEntry.Split('"')[7];
                     pool[1] = poolInfoEntry.Split('"')[11];
                     pool[2] = poolInfoEntry.Split('"')[19];
+                    pool[3] = poolInfoEntry.Split('"')[23];
+                    pool[4] = poolInfoEntry.Split('"')[27];
+                    pool[5] = poolInfoEntry.Split('"')[31];
 
                     res.Add(pool);
                 }
@@ -103,15 +112,15 @@ namespace trtlOCM
             return res;
         }
 
-        private List<string> GetSelectedPools()
+        private List<PoolEntry> GetSelectedPools()
         {
-            List<string> selectedPools = new List<string>();
+            List<PoolEntry> selectedPools = new List<PoolEntry>();
 
             foreach (PoolEntry pe in poolListPanel.Controls)
             {
                 if (pe.selectedCb.Checked)
                 {
-                    selectedPools.Add(pe.getMiningAddress());
+                    selectedPools.Add(pe);
                 }
             }
 
@@ -123,20 +132,20 @@ namespace trtlOCM
             switch (selectionModeCb.Text)
             {
                 case "lower ping":
-                    //int pingAvg = 0;
+                    int pingAvg = 0;
 
-                    //foreach (PoolEntry pe in poolListPanel.Controls)
-                    //{
-                    //    pe.selectedCb.Enabled = true;
-                    //    if (pe.getPing() != -1) pingAvg = pingAvg == 0 ? pe.getPing() : (pingAvg + pe.getPing()) / 2;
-                    //}
+                    foreach (PoolEntry pe in poolListPanel.Controls)
+                    {
+                        pe.selectedCb.Enabled = true;
+                        if (pe.getPing() != -1) pingAvg = pingAvg == 0 ? pe.getPing() : (pingAvg + pe.getPing()) / 2;
+                    }
 
                     foreach (PoolEntry pe in poolListPanel.Controls)
                     {
                         pe.selectedCb.Enabled = false;
                         if (pe.getPing() != -1)
                         {
-                            if (pe.getPing() < 50)
+                            if (pe.getPing() < pingAvg)
                             {
                                 pe.selectedCb.Checked = true;
                             }
@@ -146,20 +155,20 @@ namespace trtlOCM
                     }
 
                     break;
-                case "smaller payouts":
-                    //double payAvg = 0;
+                case "lower minpayout":
+                    double payAvg = 0;
 
-                    //foreach (PoolEntry pe in poolListPanel.Controls)
-                    //{
-                    //    pe.selectedCb.Enabled = false;
-                    //    if (pe.getMinPayout() != -1) payAvg = payAvg == 0 ? pe.getMinPayout() : (payAvg + pe.getMinPayout()) / 2;
-                    //}
+                    foreach (PoolEntry pe in poolListPanel.Controls)
+                    {
+                        pe.selectedCb.Enabled = false;
+                        if (pe.getMinPayout() != -1) payAvg = payAvg == 0 ? pe.getMinPayout() : (payAvg + pe.getMinPayout()) / 2;
+                    }
 
                     foreach (PoolEntry pe in poolListPanel.Controls)
                     {
                         pe.selectedCb.Enabled = false;
                         if (pe.getMinPayout() != -1) { 
-                            if (pe.getMinPayout() < 500) { 
+                            if (pe.getMinPayout() < payAvg) { 
                                 pe.selectedCb.Checked = true;
                             }
                             else pe.selectedCb.Checked = false;
@@ -167,27 +176,6 @@ namespace trtlOCM
                         else pe.selectedCb.Checked = false;
                     }
 
-                    break;
-                case "larger payouts":
-                    //payAvg = 0;
-
-                    //foreach (PoolEntry pe in poolListPanel.Controls)
-                    //{
-                    //    pe.selectedCb.Enabled = false;
-                    //    if (pe.getMinPayout() != -1) payAvg = payAvg == 0 ? pe.getMinPayout() : (payAvg + pe.getMinPayout()) / 2;
-                    //}
-
-                    foreach (PoolEntry pe in poolListPanel.Controls)
-                    {
-                        pe.selectedCb.Enabled = false;
-                        if (pe.getMinPayout() != -1) { 
-                            if (pe.getMinPayout() >= 500) { 
-                                pe.selectedCb.Checked = true;
-                            }
-                            else pe.selectedCb.Checked = false;
-                        }
-                        else pe.selectedCb.Checked = false;
-                    }
                     break;
                 case "lower hashrate":
                     int hashAvg = 0;
@@ -232,19 +220,19 @@ namespace trtlOCM
 
                     break;
                 case "lower fee":
-                    //double feeAvg = 0;
+                    double feeAvg = 0;
 
-                    //foreach (PoolEntry pe in poolListPanel.Controls)
-                    //{
-                    //    pe.selectedCb.Enabled = false;
-                    //    if (pe.getFee() != -1) feeAvg = feeAvg == 0 ? pe.getFee() : (feeAvg + pe.getFee()) / 2;
-                    //}
+                    foreach (PoolEntry pe in poolListPanel.Controls)
+                    {
+                        pe.selectedCb.Enabled = false;
+                        if (pe.getFee() != -1) feeAvg = feeAvg == 0 ? pe.getFee() : (feeAvg + pe.getFee()) / 2;
+                    }
 
                     foreach (PoolEntry pe in poolListPanel.Controls)
                     {
                         if (pe.getFee() != -1) {
                             pe.selectedCb.Enabled = false;
-                            if (pe.getFee() <= 0.1) { 
+                            if (pe.getFee() <= feeAvg) { 
                                 pe.selectedCb.Checked = true;
                             }
                             else pe.selectedCb.Checked = false;
@@ -253,26 +241,6 @@ namespace trtlOCM
                     }
 
                     break;
-                case "higher fee":
-                    //feeAvg = 0;
-
-                    //foreach (PoolEntry pe in poolListPanel.Controls)
-                    //{
-                    //    pe.selectedCb.Enabled = false;
-                    //    if (pe.getFee() != -1) feeAvg = feeAvg == 0 ? pe.getFee() : (feeAvg + pe.getFee()) / 2;
-                    //}
-
-                    foreach (PoolEntry pe in poolListPanel.Controls)
-                    {
-                        pe.selectedCb.Enabled = false;
-                        if (pe.getFee() != -1) { 
-                            if (pe.getFee() > 0.1) { 
-                                pe.selectedCb.Checked = true;
-                            }
-                            else pe.selectedCb.Checked = false;
-                        }
-                        else pe.selectedCb.Checked = false;
-                    }
 
                     break;
                 case "manual selection":
@@ -327,47 +295,21 @@ namespace trtlOCM
                 }
 
                 string chosenPort = "";
+                string miningPort = "";
 
                 switch (hardwareCb.Text)
                 {
-                    case "Low NBX":
-                        chosenPort = ":3333";
+                    case "Low end":
+                        chosenPort = "low";
                         break;
-		    case "Low Llama&Horse":
-                        chosenPort = ":10103";
+		            case "Mid range":
+                        chosenPort = "mid";
                         break;
-		    case "Low Hackerknowledge":
-                        chosenPort = ":5151";
-                        break;
-		    case "Low Cryptonight.mine":
-                        chosenPort = ":3332";
-                        break;
-		    case "Mid NBX":
-                        chosenPort = ":4444";
-                        break;
-                    case "Mid Llama&Horse":
-                        chosenPort = ":10104";
-                        break;
-                    case "Mid Hackerknowledge":
-                        chosenPort = ":5252";
-                        break;
-		    case "Mid Cryptonight.mine":
-                        chosenPort = ":4442";
-                        break;
-                    case "High NBX":
-                        chosenPort = ":5555";
-                        break;
-                    case "High Llama&Horse":
-                        chosenPort = ":10105";
-                        break;
-                    case "High Hackerknowledge":
-                        chosenPort = ":5353";
-                        break;
-		    case "High Cryptonight.mine":
-                        chosenPort = ":5552";
+                    case "High end":
+                        chosenPort = "high";
                         break;
                     default:
-                        chosenPort = ":3333";
+                        chosenPort = "low";
                         break;
                 }
 
@@ -383,9 +325,18 @@ namespace trtlOCM
                     if (!showCLICheck.Checked) arguments += "-B ";
                     arguments += "--donate-level 1 ";
 
-                    foreach(string pool in GetSelectedPools())
+                    foreach(PoolEntry pool in GetSelectedPools())
                     {
-                        arguments += "-o " + pool + chosenPort + " -u " + addressTb.Text + " -p x --variant 1 -k ";
+
+                        if (chosenPort == "low")
+                            miningPort = pool.getLowMiningPort();
+
+                        if (chosenPort == "mid")
+                            miningPort = pool.getMidMiningPort();
+                        if (chosenPort == "high")
+                            miningPort = pool.getHighMiningPort();
+
+                        arguments += "-o " + pool.getMiningAddress() + ':' + miningPort + " -u " + addressTb.Text + " -p x --variant 1 -k ";
                     }
 
                     if (cpuMiningCheck.Checked)
@@ -540,9 +491,18 @@ namespace trtlOCM
                     arguments += " --currency cryptonight_lite_v7";
                     arguments += " -i 6777 -r trtlocm";
 
-                    foreach (string pool in GetSelectedPools())
+                    foreach (PoolEntry pool in GetSelectedPools())
                     {
-                        arguments += " -o " + pool + chosenPort + " -u " + addressTb.Text + " -p x";
+                        if (chosenPort == "low")
+                            miningPort = pool.getLowMiningPort();
+
+                        if (chosenPort == "mid")
+                            miningPort = pool.getMidMiningPort();
+                        if (chosenPort == "high")
+                            miningPort = pool.getHighMiningPort();
+
+
+                        arguments += " -o " + pool.getMiningAddress() + ':' + miningPort + " -u " + addressTb.Text + " -p x";
                     }
 
                     if (showCLICheck.Checked)

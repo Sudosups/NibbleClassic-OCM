@@ -14,18 +14,21 @@ namespace trtlOCM
 {
     public partial class PoolEntry : UserControl
     {
-        private string address, api, miningAddress;
+        private string address, api, miningAddress, lowPort, midPort, highPort;
         private int ping = -1, hashrate = -1;
         private double fee = -1, payout = -1;
         public bool autoUpdate = false;
         private long pingStart;
 
-        public PoolEntry(string pAddress, string pApi, string pMiningAddress)
+        public PoolEntry(string pAddress, string pApi, string pMiningAddress, string plowPort, string pmidPort, string phighPort)
         {
             InitializeComponent();
             address = pAddress;
             api = pApi;
             miningAddress = pMiningAddress;
+            lowPort = plowPort;
+            midPort = pmidPort;
+            highPort = phighPort;
         }
 
         private void PoolEntry_Load(object sender, EventArgs e)
@@ -52,7 +55,7 @@ namespace trtlOCM
             pingStart = DateTime.Now.Ticks;
             try
             {
-                PingReply res = await new Ping().SendPingAsync(address.Split('/')[2], 10000);
+                PingReply res = await new Ping().SendPingAsync(miningAddress, 10000);
                 if (res.Status == IPStatus.Success)
                 {
                     ping = (int)((DateTime.Now.Ticks - pingStart) / 10000);
@@ -60,14 +63,9 @@ namespace trtlOCM
                 }
                 else if (res.Status == IPStatus.TimedOut)
                 {
-                    ping = -1;
-                    pingLbl.Text = "timeout";
+                    ping = 999;
+                    pingLbl.Text = ping.ToString() + " ms";
 
-                    try
-                    {
-                        this.Parent.Controls.Remove(this);
-                    }
-                    catch { }
                 }
                 else
                 {
@@ -103,7 +101,9 @@ namespace trtlOCM
                     fee = double.Parse(getFromJSON(@"""fee""", e.Result).Replace('.', ','));
 
                     payoutLbl.Text = payout.ToString() + " NBX";
-                    hashLbl.Text = hashrate.ToString() + " H/s";
+                    float f_hashrate = hashrate;
+                    f_hashrate = f_hashrate / 1000;
+                    hashLbl.Text = f_hashrate.ToString("0.00")  + " KH/s";
                     feeLbl.Text = fee.ToString() + "%";
                 }
                 catch
@@ -183,6 +183,21 @@ namespace trtlOCM
         public string getAddress()
         {
             return address;
+        }
+
+        public string getLowMiningPort()
+        {
+            return lowPort;
+        }
+
+        public string getMidMiningPort()
+        {
+            return midPort;
+        }
+
+        public string getHighMiningPort()
+        {
+            return highPort;
         }
 
         public string getMiningAddress()

@@ -208,7 +208,7 @@ namespace trtlOCM
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::trtlOCM.Properties.Resources.turtlecoin_symbol_color;
+            this.pictureBox1.BackgroundImage = global::trtlOCM.Properties.Resources.nibbleclassic_symbol_color;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(10, 8);
@@ -369,18 +369,10 @@ namespace trtlOCM
             // 
             this.hardwareCb.FormattingEnabled = true;
             this.hardwareCb.Items.AddRange(new object[] {
-            "Low NBX",
-	    "Low Llama&Horse",
-	    "Low Hackerknowledge",
-	    "Low Cryptonight.mine",
-            "Mid NBX",
-	    "Mid Llama&Horse",
-	    "Mid Hackerknowledge",
-	    "Mid Cryptonight.mine",
-	    "High NBX",
-            "High Llama&Horse",
-	    "High Hackerknowledge",
-	    "High Cryptonight.mine",});
+            "Low end",
+            "Mid range",
+	        "High end"
+            });
             this.hardwareCb.Location = new System.Drawing.Point(350, 49);
             this.hardwareCb.Name = "hardwareCb";
             this.hardwareCb.Size = new System.Drawing.Size(180, 28);
@@ -945,12 +937,10 @@ namespace trtlOCM
             this.selectionModeCb.FormattingEnabled = true;
             this.selectionModeCb.Items.AddRange(new object[] {
 	    "lower ping",
-            "smaller payouts",
-            "larger payouts",
+            "lower minpayout",
             "lower hashrate",
             "higher hashrate",
             "lower fee",
-	    "higher fee",
 	    "manual selection"});
             this.selectionModeCb.Location = new System.Drawing.Point(147, 380);
             this.selectionModeCb.Name = "selectionModeCb";
