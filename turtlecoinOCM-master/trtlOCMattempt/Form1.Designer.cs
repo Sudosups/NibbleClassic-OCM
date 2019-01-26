@@ -129,7 +129,7 @@ namespace trtlOCM
             this.label1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
             this.label1.Size = new System.Drawing.Size(346, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NibbleBox";
+            this.label1.Text = "NibbleBox v3.0";
             // 
             // panel1
             // 
@@ -1056,7 +1056,7 @@ namespace trtlOCM
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "NibbleBox";
+            this.Text = "NibbleBox v3.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

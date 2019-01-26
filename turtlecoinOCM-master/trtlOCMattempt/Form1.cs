@@ -590,7 +590,7 @@ namespace trtlOCM
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("This One Click Miner for TurtleCoin programmed by Encrypted Unicorn & modified by The Nibble Developers is a graphical interface for mining NBX on pools in the network using xmrig by psychocrypt or xmr-stak by fireice-uk. You can find the ocm's source code on TurtleCoin's GitHub and source codes for the bundled miners on their corresponding GitHub pages. Not related to xmr-stak or xmrig.\nVersion 1.0 beta 2", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("This One Click Miner for NibbleClassic programmed by Encrypted Unicorn & modified by The Nibble Developers is a graphical interface for mining NBX on pools in the network using xmrig by psychocrypt or xmr-stak by fireice-uk. You can find the ocm's source code on TurtleCoin's GitHub and source codes for the bundled miners on their corresponding GitHub pages. Not related to xmr-stak or xmrig.\nVersion 3.0", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         
         private void timer1_Tick(object sender, EventArgs e)
