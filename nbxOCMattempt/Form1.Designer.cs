@@ -53,8 +53,6 @@ namespace nbxOCM
             this.hardwareCb = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.addressTb = new System.Windows.Forms.TextBox();
-            this.raindanceRb = new System.Windows.Forms.RadioButton();
-            this.addressRb = new System.Windows.Forms.RadioButton();
             this.gpuMiningCheck = new System.Windows.Forms.CheckBox();
             this.advancedCheck = new System.Windows.Forms.CheckBox();
             this.cpuMiningCheck = new System.Windows.Forms.CheckBox();
@@ -98,6 +96,7 @@ namespace nbxOCM
             this.poolStatsUpdateCb = new System.Windows.Forms.CheckBox();
             this.poolListPanel = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -302,6 +301,7 @@ namespace nbxOCM
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.linkLabel7);
             this.panel3.Controls.Add(this.nvidiaMiningCheck);
             this.panel3.Controls.Add(this.amdMiningCheck);
@@ -310,8 +310,6 @@ namespace nbxOCM
             this.panel3.Controls.Add(this.hardwareCb);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.addressTb);
-            this.panel3.Controls.Add(this.raindanceRb);
-            this.panel3.Controls.Add(this.addressRb);
             this.panel3.Controls.Add(this.gpuMiningCheck);
             this.panel3.Controls.Add(this.advancedCheck);
             this.panel3.Controls.Add(this.cpuMiningCheck);
@@ -358,7 +356,7 @@ namespace nbxOCM
             // 
             // refreshTimeNum
             // 
-            this.refreshTimeNum.Location = new System.Drawing.Point(443, 173);
+            this.refreshTimeNum.Location = new System.Drawing.Point(434, 133);
             this.refreshTimeNum.Maximum = new decimal(new int[] {
             60,
             0,
@@ -382,7 +380,7 @@ namespace nbxOCM
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(302, 176);
+            this.label3.Location = new System.Drawing.Point(298, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(217, 20);
             this.label3.TabIndex = 8;
@@ -414,34 +412,11 @@ namespace nbxOCM
             // addressTb
             // 
             this.addressTb.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.addressTb.Location = new System.Drawing.Point(24, 112);
+            this.addressTb.Location = new System.Drawing.Point(24, 101);
             this.addressTb.Name = "addressTb";
             this.addressTb.Size = new System.Drawing.Size(491, 27);
             this.addressTb.TabIndex = 4;
             this.addressTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // raindanceRb
-            // 
-            this.raindanceRb.AutoSize = true;
-            this.raindanceRb.Enabled = false;
-            this.raindanceRb.Location = new System.Drawing.Point(24, 146);
-            this.raindanceRb.Name = "raindanceRb";
-            this.raindanceRb.Size = new System.Drawing.Size(134, 24);
-            this.raindanceRb.TabIndex = 3;
-            this.raindanceRb.Text = "Happy nibbling!";
-            this.raindanceRb.UseVisualStyleBackColor = true;
-            // 
-            // addressRb
-            // 
-            this.addressRb.AutoSize = true;
-            this.addressRb.Checked = true;
-            this.addressRb.Location = new System.Drawing.Point(24, 82);
-            this.addressRb.Name = "addressRb";
-            this.addressRb.Size = new System.Drawing.Size(188, 24);
-            this.addressRb.TabIndex = 3;
-            this.addressRb.TabStop = true;
-            this.addressRb.Text = "Mine to address (NBX...):";
-            this.addressRb.UseVisualStyleBackColor = true;
             // 
             // gpuMiningCheck
             // 
@@ -462,7 +437,7 @@ namespace nbxOCM
             this.advancedCheck.AutoSize = true;
             this.advancedCheck.Checked = true;
             this.advancedCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.advancedCheck.Location = new System.Drawing.Point(24, 175);
+            this.advancedCheck.Location = new System.Drawing.Point(24, 134);
             this.advancedCheck.Name = "advancedCheck";
             this.advancedCheck.Size = new System.Drawing.Size(254, 24);
             this.advancedCheck.TabIndex = 2;
@@ -502,7 +477,7 @@ namespace nbxOCM
             this.panel4.Controls.Add(this.startBtn);
             this.panel4.Controls.Add(this.payoutBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 453);
+            this.panel4.Location = new System.Drawing.Point(0, 398);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(544, 56);
             this.panel4.TabIndex = 4;
@@ -519,7 +494,7 @@ namespace nbxOCM
             // 
             // payoutBtn
             // 
-            this.payoutBtn.Location = new System.Drawing.Point(335, 10);
+            this.payoutBtn.Location = new System.Drawing.Point(363, 10);
             this.payoutBtn.Name = "payoutBtn";
             this.payoutBtn.Size = new System.Drawing.Size(156, 34);
             this.payoutBtn.TabIndex = 0;
@@ -894,7 +869,7 @@ namespace nbxOCM
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(544, 509);
+            this.panel6.Size = new System.Drawing.Size(544, 454);
             this.panel6.TabIndex = 6;
             // 
             // panel7
@@ -904,7 +879,7 @@ namespace nbxOCM
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(544, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(541, 509);
+            this.panel7.Size = new System.Drawing.Size(541, 454);
             this.panel7.TabIndex = 7;
             // 
             // panel8
@@ -923,7 +898,7 @@ namespace nbxOCM
             this.panel8.Location = new System.Drawing.Point(0, 87);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(10);
-            this.panel8.Size = new System.Drawing.Size(541, 422);
+            this.panel8.Size = new System.Drawing.Size(541, 367);
             this.panel8.TabIndex = 6;
             // 
             // linkLabel8
@@ -956,7 +931,7 @@ namespace nbxOCM
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 17.25F);
             this.label13.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label13.Location = new System.Drawing.Point(506, 374);
+            this.label13.Location = new System.Drawing.Point(506, 319);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 31);
@@ -970,7 +945,7 @@ namespace nbxOCM
             this.addPoolAddress.AutoSize = true;
             this.addPoolAddress.Font = new System.Drawing.Font("Segoe UI", 17.25F);
             this.addPoolAddress.ForeColor = System.Drawing.Color.ForestGreen;
-            this.addPoolAddress.Location = new System.Drawing.Point(479, 374);
+            this.addPoolAddress.Location = new System.Drawing.Point(479, 319);
             this.addPoolAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addPoolAddress.Name = "addPoolAddress";
             this.addPoolAddress.Size = new System.Drawing.Size(30, 31);
@@ -981,7 +956,7 @@ namespace nbxOCM
             // newPoolTb
             // 
             this.newPoolTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.newPoolTb.Location = new System.Drawing.Point(308, 380);
+            this.newPoolTb.Location = new System.Drawing.Point(308, 325);
             this.newPoolTb.Name = "newPoolTb";
             this.newPoolTb.Size = new System.Drawing.Size(164, 27);
             this.newPoolTb.TabIndex = 7;
@@ -998,7 +973,7 @@ namespace nbxOCM
             "higher hashrate",
             "lower fee",
             "manual selection"});
-            this.selectionModeCb.Location = new System.Drawing.Point(147, 380);
+            this.selectionModeCb.Location = new System.Drawing.Point(147, 325);
             this.selectionModeCb.Name = "selectionModeCb";
             this.selectionModeCb.Size = new System.Drawing.Size(155, 28);
             this.selectionModeCb.TabIndex = 6;
@@ -1009,7 +984,7 @@ namespace nbxOCM
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 383);
+            this.label12.Location = new System.Drawing.Point(20, 328);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(121, 20);
             this.label12.TabIndex = 5;
@@ -1019,7 +994,7 @@ namespace nbxOCM
             // 
             this.poolStatsUpdateCb.AutoSize = true;
             this.poolStatsUpdateCb.Enabled = false;
-            this.poolStatsUpdateCb.Location = new System.Drawing.Point(86, 14);
+            this.poolStatsUpdateCb.Location = new System.Drawing.Point(179, 15);
             this.poolStatsUpdateCb.Name = "poolStatsUpdateCb";
             this.poolStatsUpdateCb.Size = new System.Drawing.Size(205, 24);
             this.poolStatsUpdateCb.TabIndex = 4;
@@ -1036,7 +1011,7 @@ namespace nbxOCM
             this.poolListPanel.AutoScroll = true;
             this.poolListPanel.Location = new System.Drawing.Point(24, 45);
             this.poolListPanel.Name = "poolListPanel";
-            this.poolListPanel.Size = new System.Drawing.Size(517, 321);
+            this.poolListPanel.Size = new System.Drawing.Size(517, 266);
             this.poolListPanel.TabIndex = 3;
             // 
             // label10
@@ -1053,12 +1028,22 @@ namespace nbxOCM
             this.label10.TabIndex = 2;
             this.label10.Text = "Pool selection";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(20, 78);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(170, 20);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Mine to address (NBX...):";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1085, 509);
+            this.ClientSize = new System.Drawing.Size(1085, 454);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1107,8 +1092,6 @@ namespace nbxOCM
         private System.Windows.Forms.Label hashrateLbl;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox addressTb;
-        private System.Windows.Forms.RadioButton raindanceRb;
-        private System.Windows.Forms.RadioButton addressRb;
         private System.Windows.Forms.CheckBox gpuMiningCheck;
         private System.Windows.Forms.CheckBox advancedCheck;
         private System.Windows.Forms.CheckBox cpuMiningCheck;
@@ -1167,6 +1150,7 @@ namespace nbxOCM
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.Label label15;
     }
 }
 

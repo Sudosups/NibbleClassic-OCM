@@ -296,7 +296,7 @@ namespace nbxOCM
         {
             if (startBtn.Text == "Start mining!")
             {
-                if (addressRb.Checked && !addressTb.Text.StartsWith("Nib") && addressTb.Text.Length != 98)
+                if (!addressTb.Text.StartsWith("Nib") && addressTb.Text.Length != 98)
                 {
                     MessageBox.Show("Please check your NibbleClassic receiving address.");
                     return;
@@ -747,8 +747,7 @@ namespace nbxOCM
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            addressRb.Checked = true;
-            raindanceRb.Checked = false;
+
 
             nbxOCM.Properties.Settings.Default.savedAddress = addressTb.Text;
         }
@@ -931,6 +930,12 @@ namespace nbxOCM
         private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("In this section you can see information about available mining pools and select under which consideration pools will be chosen automatically by the program or select the pool(s) you want to mine on manually.\nUsually, pools with a low ping time are to be preferred. If you are a slow miner, you can select a pool with a lower payment threshold or the other way around for faster computers. Pools that have a high hashrate usually find blocks faster a produce payments sooner. To keep the network decentralized, it's better to not over-power leading pools though. Selecting multiple pools only gives you the possibility to have a backup selection in case of one of your selected pools going down.\nPlease wait for all stats and pings to load.\nPools that can't be pinged or don't respond to the API request are automatically discarded by the program right now, sorry for that!");
+        }
+
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
