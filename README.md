@@ -12,12 +12,6 @@ NibbleBox is a GUI for the cryptonight mining software `xmrig` by @psychocrypt `
 * Specify usage of CPU/GPU
 * Some advanced settings
 
-## Planned features/steps
-* ~~Integrate pool statistics~~ 
-* ~~Select multiple pools under additional consideration of e.g. pool hashrate~~ 
-* Implement/enable all available advanced options for xmr-stak 
-
-
 ## How to build
 Download the repository and extract it. Open the .sln file with a recent version of Visual Studio (Community Edition / make sure you have C# packages installed). Build the project using the green run button or "Build Solution" in the Build menu. You'll find the binaries inside the project folder in the directory `bin/debug/` or `bin/release/`. Copy `NibbleBox.exe` to your preferred directory and make sure to have the miner executables in the same folder as described below.
 
