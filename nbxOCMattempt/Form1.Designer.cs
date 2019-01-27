@@ -130,7 +130,7 @@ namespace nbxOCM
             this.label1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
             this.label1.Size = new System.Drawing.Size(213, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NibbleBox v3.1";
+            this.label1.Text = "NibbleBox v3.2";
             // 
             // panel1
             // 
@@ -1066,7 +1066,7 @@ namespace nbxOCM
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "NibbleBox v3.1";
+            this.Text = "NibbleBox v3.2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
