@@ -26,6 +26,7 @@ namespace trtlOCM
             this.Width = 1200;
 
             startBtn.Enabled = false;
+            payoutBtn.Enabled = false;
             startBtn.Text = "Initializing pools...";
 
             addressTb.Text = trtlOCM.Properties.Settings.Default.savedAddress;
@@ -272,6 +273,24 @@ namespace trtlOCM
 
             return "";
         }
+
+
+        private void payoutBtn_Click(object sender, EventArgs e)
+        {
+
+            string pooladd = connectedServerLbl.Text.Split(':')[1].Trim();
+            
+
+            foreach (PoolEntry pe in poolListPanel.Controls)
+            {
+                if(pe.getMiningAddress() == pooladd && addressTb.Text.StartsWith("Nib"))
+                {
+                    System.Diagnostics.Process.Start(pe.getAddress() + "/?wallet="+ addressTb.Text + "#worker_stats");
+                }
+            }
+
+        }
+
 
         private void startBtn_Click(object sender, EventArgs e)
         {
@@ -555,6 +574,7 @@ namespace trtlOCM
                 timer1.Start();
 
                 startBtn.Text = "Stop mining!";
+                
             } else
             {
                 try
@@ -709,6 +729,16 @@ namespace trtlOCM
                     connectionPage = "Connected to: " + (connectionPage.Substring(connectionPage.IndexOf("Pool address</th><td>")).Split('>')[2]).Split('<')[0];
                     connectedServerLbl.Text = connectionPage;
                 }
+
+                foreach (PoolEntry pe in poolListPanel.Controls)
+                {
+                    if (pe.getMiningAddress() == connectedServerLbl.Text.Split(':')[1].Trim() && addressTb.Text.StartsWith("Nib"))
+                    {
+                        payoutBtn.Enabled = true;
+                    }
+                }
+                
+
             } catch (Exception excp)
             {
                 MessageBox.Show("An error occured while fetching miner's api data: " + excp.ToString());

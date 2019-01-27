@@ -38,12 +38,14 @@ namespace trtlOCM
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.difficultyLbl = new System.Windows.Forms.Label();
             this.connectedServerLbl = new System.Windows.Forms.Label();
             this.bestShareLbl = new System.Windows.Forms.Label();
             this.shareCountLbl = new System.Windows.Forms.Label();
             this.hashrateLbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.nvidiaMiningCheck = new System.Windows.Forms.CheckBox();
             this.amdMiningCheck = new System.Windows.Forms.CheckBox();
             this.refreshTimeNum = new System.Windows.Forms.NumericUpDown();
@@ -59,7 +61,9 @@ namespace trtlOCM
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.startBtn = new System.Windows.Forms.Button();
+            this.payoutBtn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.autoConfigCheck = new System.Windows.Forms.CheckBox();
             this.writeLogFileTb = new System.Windows.Forms.TextBox();
             this.cpuLowPowerCheck = new System.Windows.Forms.CheckBox();
@@ -84,6 +88,7 @@ namespace trtlOCM
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.label13 = new System.Windows.Forms.Label();
             this.addPoolAddress = new System.Windows.Forms.Label();
@@ -93,10 +98,6 @@ namespace trtlOCM
             this.poolStatsUpdateCb = new System.Windows.Forms.CheckBox();
             this.poolListPanel = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -127,7 +128,7 @@ namespace trtlOCM
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
-            this.label1.Size = new System.Drawing.Size(346, 41);
+            this.label1.Size = new System.Drawing.Size(213, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "NibbleBox v3.1";
             // 
@@ -233,6 +234,17 @@ namespace trtlOCM
             this.panel2.Size = new System.Drawing.Size(544, 135);
             this.panel2.TabIndex = 2;
             // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Location = new System.Drawing.Point(515, 10);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(16, 20);
+            this.linkLabel5.TabIndex = 4;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "?";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            // 
             // difficultyLbl
             // 
             this.difficultyLbl.AutoSize = true;
@@ -311,6 +323,17 @@ namespace trtlOCM
             this.panel3.Size = new System.Drawing.Size(544, 218);
             this.panel3.TabIndex = 3;
             // 
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Location = new System.Drawing.Point(515, 10);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(16, 20);
+            this.linkLabel7.TabIndex = 4;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "?";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
+            // 
             // nvidiaMiningCheck
             // 
             this.nvidiaMiningCheck.AutoSize = true;
@@ -371,8 +394,7 @@ namespace trtlOCM
             this.hardwareCb.Items.AddRange(new object[] {
             "Low end",
             "Mid range",
-	        "High end"
-            });
+            "High end"});
             this.hardwareCb.Location = new System.Drawing.Point(350, 49);
             this.hardwareCb.Name = "hardwareCb";
             this.hardwareCb.Size = new System.Drawing.Size(180, 28);
@@ -385,7 +407,7 @@ namespace trtlOCM
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(240, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 20);
+            this.label4.Size = new System.Drawing.Size(287, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Match Hardware/Pool with pool selection:";
             // 
@@ -404,7 +426,7 @@ namespace trtlOCM
             this.raindanceRb.Enabled = false;
             this.raindanceRb.Location = new System.Drawing.Point(24, 146);
             this.raindanceRb.Name = "raindanceRb";
-            this.raindanceRb.Size = new System.Drawing.Size(147, 24);
+            this.raindanceRb.Size = new System.Drawing.Size(134, 24);
             this.raindanceRb.TabIndex = 3;
             this.raindanceRb.Text = "Happy nibbling!";
             this.raindanceRb.UseVisualStyleBackColor = true;
@@ -415,7 +437,7 @@ namespace trtlOCM
             this.addressRb.Checked = true;
             this.addressRb.Location = new System.Drawing.Point(24, 82);
             this.addressRb.Name = "addressRb";
-            this.addressRb.Size = new System.Drawing.Size(190, 24);
+            this.addressRb.Size = new System.Drawing.Size(188, 24);
             this.addressRb.TabIndex = 3;
             this.addressRb.TabStop = true;
             this.addressRb.Text = "Mine to address (NBX...):";
@@ -438,8 +460,7 @@ namespace trtlOCM
             // advancedCheck
             // 
             this.advancedCheck.AutoSize = true;
-	    this.advancedCheck.Checked = false;
-            this.advancedCheck.Enabled = true;
+            this.advancedCheck.Checked = true;
             this.advancedCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.advancedCheck.Location = new System.Drawing.Point(24, 175);
             this.advancedCheck.Name = "advancedCheck";
@@ -479,6 +500,7 @@ namespace trtlOCM
             // panel4
             // 
             this.panel4.Controls.Add(this.startBtn);
+            this.panel4.Controls.Add(this.payoutBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 453);
             this.panel4.Name = "panel4";
@@ -487,13 +509,23 @@ namespace trtlOCM
             // 
             // startBtn
             // 
-            this.startBtn.Location = new System.Drawing.Point(192, 10);
+            this.startBtn.Location = new System.Drawing.Point(30, 10);
             this.startBtn.Name = "startBtn";
             this.startBtn.Size = new System.Drawing.Size(156, 34);
             this.startBtn.TabIndex = 0;
             this.startBtn.Text = "Start mining!";
             this.startBtn.UseVisualStyleBackColor = true;
             this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
+            // 
+            // payoutBtn
+            // 
+            this.payoutBtn.Location = new System.Drawing.Point(335, 10);
+            this.payoutBtn.Name = "payoutBtn";
+            this.payoutBtn.Size = new System.Drawing.Size(156, 34);
+            this.payoutBtn.TabIndex = 0;
+            this.payoutBtn.Text = "Check payments!";
+            this.payoutBtn.UseVisualStyleBackColor = true;
+            this.payoutBtn.Click += new System.EventHandler(this.payoutBtn_Click);
             // 
             // panel5
             // 
@@ -525,6 +557,18 @@ namespace trtlOCM
             this.panel5.Padding = new System.Windows.Forms.Padding(10);
             this.panel5.Size = new System.Drawing.Size(541, 87);
             this.panel5.TabIndex = 5;
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(410, 16);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(118, 20);
+            this.linkLabel4.TabIndex = 13;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Reset everything";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // autoConfigCheck
             // 
@@ -882,6 +926,18 @@ namespace trtlOCM
             this.panel8.Size = new System.Drawing.Size(541, 422);
             this.panel8.TabIndex = 6;
             // 
+            // linkLabel8
+            // 
+            this.linkLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.Location = new System.Drawing.Point(508, 15);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(16, 20);
+            this.linkLabel8.TabIndex = 4;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "?";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
+            // 
             // linkLabel6
             // 
             this.linkLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -936,12 +992,12 @@ namespace trtlOCM
             this.selectionModeCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.selectionModeCb.FormattingEnabled = true;
             this.selectionModeCb.Items.AddRange(new object[] {
-	    "lower ping",
+            "lower ping",
             "lower minpayout",
             "lower hashrate",
             "higher hashrate",
             "lower fee",
-	    "manual selection"});
+            "manual selection"});
             this.selectionModeCb.Location = new System.Drawing.Point(147, 380);
             this.selectionModeCb.Name = "selectionModeCb";
             this.selectionModeCb.Size = new System.Drawing.Size(155, 28);
@@ -993,55 +1049,9 @@ namespace trtlOCM
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.label10.Size = new System.Drawing.Size(75, 31);
+            this.label10.Size = new System.Drawing.Size(162, 31);
             this.label10.TabIndex = 2;
             this.label10.Text = "Pool selection";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(410, 16);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(118, 20);
-            this.linkLabel4.TabIndex = 13;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Reset everything";
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(515, 10);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(16, 20);
-            this.linkLabel5.TabIndex = 4;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "?";
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
-            // 
-            // linkLabel7
-            // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(515, 10);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(16, 20);
-            this.linkLabel7.TabIndex = 4;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "?";
-            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
-            // 
-            // linkLabel8
-            // 
-            this.linkLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(508, 15);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(16, 20);
-            this.linkLabel8.TabIndex = 4;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "?";
-            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
             // 
             // Form1
             // 
@@ -1105,6 +1115,7 @@ namespace trtlOCM
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button startBtn;
+        private System.Windows.Forms.Button payoutBtn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ComboBox aesCb;
         private System.Windows.Forms.NumericUpDown cpuThreadNum;
