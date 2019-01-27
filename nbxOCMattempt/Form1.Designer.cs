@@ -45,6 +45,7 @@ namespace nbxOCM
             this.shareCountLbl = new System.Windows.Forms.Label();
             this.hashrateLbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.nvidiaMiningCheck = new System.Windows.Forms.CheckBox();
             this.amdMiningCheck = new System.Windows.Forms.CheckBox();
@@ -96,7 +97,6 @@ namespace nbxOCM
             this.poolStatsUpdateCb = new System.Windows.Forms.CheckBox();
             this.poolListPanel = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -321,6 +321,16 @@ namespace nbxOCM
             this.panel3.Size = new System.Drawing.Size(544, 218);
             this.panel3.TabIndex = 3;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(20, 78);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(170, 20);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Mine to address (NBX...):";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
             // linkLabel7
             // 
             this.linkLabel7.AutoSize = true;
@@ -403,11 +413,12 @@ namespace nbxOCM
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(240, 25);
+            this.label4.Location = new System.Drawing.Point(346, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(287, 20);
+            this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Match Hardware/Pool with pool selection:";
+            this.label4.Text = "Hardware Type:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // addressTb
             // 
@@ -530,7 +541,7 @@ namespace nbxOCM
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(10);
-            this.panel5.Size = new System.Drawing.Size(541, 87);
+            this.panel5.Size = new System.Drawing.Size(541, 100);
             this.panel5.TabIndex = 5;
             // 
             // linkLabel4
@@ -895,10 +906,10 @@ namespace nbxOCM
             this.panel8.Controls.Add(this.poolListPanel);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 87);
+            this.panel8.Location = new System.Drawing.Point(0, 100);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(10);
-            this.panel8.Size = new System.Drawing.Size(541, 367);
+            this.panel8.Size = new System.Drawing.Size(541, 354);
             this.panel8.TabIndex = 6;
             // 
             // linkLabel8
@@ -931,7 +942,7 @@ namespace nbxOCM
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 17.25F);
             this.label13.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label13.Location = new System.Drawing.Point(506, 319);
+            this.label13.Location = new System.Drawing.Point(506, 306);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 31);
@@ -945,7 +956,7 @@ namespace nbxOCM
             this.addPoolAddress.AutoSize = true;
             this.addPoolAddress.Font = new System.Drawing.Font("Segoe UI", 17.25F);
             this.addPoolAddress.ForeColor = System.Drawing.Color.ForestGreen;
-            this.addPoolAddress.Location = new System.Drawing.Point(479, 319);
+            this.addPoolAddress.Location = new System.Drawing.Point(479, 306);
             this.addPoolAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addPoolAddress.Name = "addPoolAddress";
             this.addPoolAddress.Size = new System.Drawing.Size(30, 31);
@@ -956,7 +967,7 @@ namespace nbxOCM
             // newPoolTb
             // 
             this.newPoolTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.newPoolTb.Location = new System.Drawing.Point(308, 325);
+            this.newPoolTb.Location = new System.Drawing.Point(308, 312);
             this.newPoolTb.Name = "newPoolTb";
             this.newPoolTb.Size = new System.Drawing.Size(164, 27);
             this.newPoolTb.TabIndex = 7;
@@ -973,7 +984,7 @@ namespace nbxOCM
             "higher hashrate",
             "lower fee",
             "manual selection"});
-            this.selectionModeCb.Location = new System.Drawing.Point(147, 325);
+            this.selectionModeCb.Location = new System.Drawing.Point(147, 312);
             this.selectionModeCb.Name = "selectionModeCb";
             this.selectionModeCb.Size = new System.Drawing.Size(155, 28);
             this.selectionModeCb.TabIndex = 6;
@@ -984,7 +995,7 @@ namespace nbxOCM
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 328);
+            this.label12.Location = new System.Drawing.Point(20, 315);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(121, 20);
             this.label12.TabIndex = 5;
@@ -1011,7 +1022,7 @@ namespace nbxOCM
             this.poolListPanel.AutoScroll = true;
             this.poolListPanel.Location = new System.Drawing.Point(24, 45);
             this.poolListPanel.Name = "poolListPanel";
-            this.poolListPanel.Size = new System.Drawing.Size(517, 266);
+            this.poolListPanel.Size = new System.Drawing.Size(517, 253);
             this.poolListPanel.TabIndex = 3;
             // 
             // label10
@@ -1027,16 +1038,6 @@ namespace nbxOCM
             this.label10.Size = new System.Drawing.Size(162, 31);
             this.label10.TabIndex = 2;
             this.label10.Text = "Pool selection";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(20, 78);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(170, 20);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Mine to address (NBX...):";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // Form1
             // 
