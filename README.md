@@ -23,7 +23,7 @@ Download the repository and extract it. Open the .sln file with a recent version
 Fork this Project and edit the pools.json file. After that, make a Pull Request to our Repository. After a review we will add your pool.
 
 ## Credits
-Coded by EncryptedUnicorn for Turtlecoin
+Coded by EncryptedUnicorn for Turtlecoin [turtlecoinOCM](https://github.com/encryptedunicorn/turtlecoinOCM)
 
 Modified by The Nibble Developers, with a special mention to Belorion
 
