@@ -7,7 +7,7 @@
     <ProjectGuid>{2B79C381-C8F4-4001-BDD5-F1B9938370AF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>trtlOCM</RootNamespace>
+    <RootNamespace>nbxOCM</RootNamespace>
     <AssemblyName>NibbleBox</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

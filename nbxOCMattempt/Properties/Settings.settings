@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="trtlOCM.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="nbxOCM.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="savedPools" Type="System.String" Scope="User">
@@ -42,16 +42,16 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="xmrigCPUpath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">miners\xmrig\xmrig.exe</Value>
+      <Value Profile="(Default)">xmrig.exe</Value>
     </Setting>
     <Setting Name="xmrigAMDpath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">miners\xmrigamd\xmrig-amd.exe</Value>
+      <Value Profile="(Default)">xmrig-amd.exe</Value>
     </Setting>
     <Setting Name="xmrigNVpath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">miners\xmrignvidia\xmrig-nvidia.exe</Value>
+      <Value Profile="(Default)">xmrig-nvidia.exe</Value>
     </Setting>
     <Setting Name="xmrstakpath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">miners\xmr-stak\xmr-stak.exe</Value>
+      <Value Profile="(Default)">xmr-stak.exe</Value>
     </Setting>
   </Settings>
 </SettingsFile>

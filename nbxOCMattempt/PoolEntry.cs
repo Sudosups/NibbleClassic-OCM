@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
 
-namespace trtlOCM
+namespace nbxOCM
 {
     public partial class PoolEntry : UserControl
     {
@@ -244,10 +244,10 @@ namespace trtlOCM
 
         private void selectedCb_CheckedChanged(object sender, EventArgs e)
         {
-            if (selectedCb.Checked && !trtlOCM.Properties.Settings.Default.savedPools.Contains(miningAddress))
-                trtlOCM.Properties.Settings.Default.savedPools += miningAddress;
+            if (selectedCb.Checked && !nbxOCM.Properties.Settings.Default.savedPools.Contains(miningAddress))
+                nbxOCM.Properties.Settings.Default.savedPools += miningAddress;
             else if (!selectedCb.Checked)
-                trtlOCM.Properties.Settings.Default.savedPools = trtlOCM.Properties.Settings.Default.savedPools.Replace(miningAddress, "");
+                nbxOCM.Properties.Settings.Default.savedPools = nbxOCM.Properties.Settings.Default.savedPools.Replace(miningAddress, "");
         }
     }
 }

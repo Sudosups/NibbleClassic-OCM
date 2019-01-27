@@ -26,18 +26,6 @@ Download the repository and extract it. Open the .sln file with a recent version
 * Refer to [xmr-stak](https://github.com/fireice-uk/xmr-stak) and [xmrig](https://github.com/xmrig)
 * The program needs a specific folder structure to work.
 
-Folder structure from where the NibbleBox is placed:
-
-* miners
-  * xmrig
-    * xmrig.exe
-  * xmrigamd
-    * xmrig-amd.exe
-  * xmrignvidia
-    * xmrig-nvidia.exe
-  * xmr-stak
-    * xmr-stak.exe *(alongside all other necessary files)*
-
 
 ## Credits
 Coded by EncryptedUnicorn for Turtlecoin

@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace trtlOCM
+namespace nbxOCM
 {
     public partial class Form1 : Form
     {
@@ -29,17 +29,17 @@ namespace trtlOCM
             payoutBtn.Enabled = false;
             startBtn.Text = "Initializing pools...";
 
-            addressTb.Text = trtlOCM.Properties.Settings.Default.savedAddress;
-            cpuMiningCheck.Checked = trtlOCM.Properties.Settings.Default.cpuCb;
-            nvidiaMiningCheck.Checked = trtlOCM.Properties.Settings.Default.nvCb;
-            amdMiningCheck.Checked = trtlOCM.Properties.Settings.Default.amdCb;
-            gpuMiningCheck.Checked = trtlOCM.Properties.Settings.Default.gpuCb;
-            cpuUsageNum.Value = trtlOCM.Properties.Settings.Default.cpuPerc;
-            hardwareCb.SelectedIndex = trtlOCM.Properties.Settings.Default.hwType;
-            refreshTimeNum.Value = trtlOCM.Properties.Settings.Default.statsSecs;
-            writeLogCheck.Checked = trtlOCM.Properties.Settings.Default.logCb;
-            showCLICheck.Checked = trtlOCM.Properties.Settings.Default.cliCb;
-            minerSelectionCb.SelectedIndex = trtlOCM.Properties.Settings.Default.minerPreference;
+            addressTb.Text = nbxOCM.Properties.Settings.Default.savedAddress;
+            cpuMiningCheck.Checked = nbxOCM.Properties.Settings.Default.cpuCb;
+            nvidiaMiningCheck.Checked = nbxOCM.Properties.Settings.Default.nvCb;
+            amdMiningCheck.Checked = nbxOCM.Properties.Settings.Default.amdCb;
+            gpuMiningCheck.Checked = nbxOCM.Properties.Settings.Default.gpuCb;
+            cpuUsageNum.Value = nbxOCM.Properties.Settings.Default.cpuPerc;
+            hardwareCb.SelectedIndex = nbxOCM.Properties.Settings.Default.hwType;
+            refreshTimeNum.Value = nbxOCM.Properties.Settings.Default.statsSecs;
+            writeLogCheck.Checked = nbxOCM.Properties.Settings.Default.logCb;
+            showCLICheck.Checked = nbxOCM.Properties.Settings.Default.cliCb;
+            minerSelectionCb.SelectedIndex = nbxOCM.Properties.Settings.Default.minerPreference;
 
             initPools();
         }
@@ -70,7 +70,7 @@ namespace trtlOCM
                     entryElement.setAutoUpdate(poolStatsUpdateCb.Checked);
                     entryElement.selectedCb.Enabled = selectionModeCb.Text == "manual selection" ? true : false;
 
-                    entryElement.selectedCb.Checked = trtlOCM.Properties.Settings.Default.savedPools.Contains(poolInfo[2]);
+                    entryElement.selectedCb.Checked = nbxOCM.Properties.Settings.Default.savedPools.Contains(poolInfo[2]);
 
                     entryElement.Dock = DockStyle.Top;
                     poolListPanel.Controls.Add(entryElement);
@@ -254,7 +254,7 @@ namespace trtlOCM
                     break;
             }
 
-            trtlOCM.Properties.Settings.Default.poolPreference = selectionModeCb.SelectedIndex;
+            nbxOCM.Properties.Settings.Default.poolPreference = selectionModeCb.SelectedIndex;
         }
         
         private string MinerExecutableNotFound(string filename)
@@ -369,7 +369,7 @@ namespace trtlOCM
 
                         cpuMinerInfo.WorkingDirectory = Directory.GetCurrentDirectory();
 
-                        cpuMinerInfo.FileName = trtlOCM.Properties.Settings.Default.xmrigCPUpath; // @"miners\xmrig\xmrig.exe";
+                        cpuMinerInfo.FileName = nbxOCM.Properties.Settings.Default.xmrigCPUpath; // @"miners\xmrig\xmrig.exe";
                         cpuMinerInfo.Arguments = cpuArguments;
                         if (showCLICheck.Checked)
                         {
@@ -391,7 +391,7 @@ namespace trtlOCM
                             if (location != "")
                             {
                                 miner.StartInfo.FileName = location;
-                                trtlOCM.Properties.Settings.Default.xmrigCPUpath = location;
+                                nbxOCM.Properties.Settings.Default.xmrigCPUpath = location;
                                 miner.Start();
                             }
                             else
@@ -413,7 +413,7 @@ namespace trtlOCM
 
                         amdMinerInfo.WorkingDirectory = Directory.GetCurrentDirectory();
 
-                        amdMinerInfo.FileName = trtlOCM.Properties.Settings.Default.xmrigAMDpath; //@"miners\xmrigamd\xmrig-amd.exe";
+                        amdMinerInfo.FileName = nbxOCM.Properties.Settings.Default.xmrigAMDpath; //@"miners\xmrigamd\xmrig-amd.exe";
                         amdMinerInfo.Arguments = amdArguments;
                         if (showCLICheck.Checked)
                         {
@@ -435,7 +435,7 @@ namespace trtlOCM
                             if (location != "")
                             {
                                 miner.StartInfo.FileName = location;
-                                trtlOCM.Properties.Settings.Default.xmrigAMDpath = location;
+                                nbxOCM.Properties.Settings.Default.xmrigAMDpath = location;
                                 miner.Start();
                             }
                             else
@@ -457,7 +457,7 @@ namespace trtlOCM
 
                         nvidiaMinerInfo.WorkingDirectory = Directory.GetCurrentDirectory();
 
-                        nvidiaMinerInfo.FileName = trtlOCM.Properties.Settings.Default.xmrigNVpath; //@"miners\xmrignvidia\xmrig-nvidia.exe";
+                        nvidiaMinerInfo.FileName = nbxOCM.Properties.Settings.Default.xmrigNVpath; //@"miners\xmrignvidia\xmrig-nvidia.exe";
                         nvidiaMinerInfo.Arguments = nvidiaArguments;
                         if (showCLICheck.Checked)
                         {
@@ -479,7 +479,7 @@ namespace trtlOCM
                             if (location != "")
                             {
                                 miner.StartInfo.FileName = location;
-                                trtlOCM.Properties.Settings.Default.xmrigNVpath = location;
+                                nbxOCM.Properties.Settings.Default.xmrigNVpath = location;
                                 miner.Start();
                             }
                             else
@@ -508,7 +508,7 @@ namespace trtlOCM
                     }
 
                     arguments += " --currency cryptonight_lite_v7";
-                    arguments += " -i 6777 -r trtlocm";
+                    arguments += " -i 6777 -r nbxocm";
 
                     foreach (PoolEntry pool in GetSelectedPools())
                     {
@@ -535,7 +535,7 @@ namespace trtlOCM
 
                     minerInfo.WorkingDirectory = Directory.GetCurrentDirectory();
 
-                    minerInfo.FileName = trtlOCM.Properties.Settings.Default.xmrstakpath; //@"miners\xmr-stak\xmr-stak.exe";
+                    minerInfo.FileName = nbxOCM.Properties.Settings.Default.xmrstakpath; //@"miners\xmr-stak\xmr-stak.exe";
                     minerInfo.Arguments = arguments;
 
                     miner.StartInfo = minerInfo;
@@ -550,7 +550,7 @@ namespace trtlOCM
                         if (location != "")
                         {
                             miner.StartInfo.FileName = location;
-                            trtlOCM.Properties.Settings.Default.xmrstakpath = location;
+                            nbxOCM.Properties.Settings.Default.xmrstakpath = location;
                             miner.Start();
                         }
                         else
@@ -569,7 +569,7 @@ namespace trtlOCM
                     return;
                 }
 
-                trtlOCM.Properties.Settings.Default.Save();
+                nbxOCM.Properties.Settings.Default.Save();
 
                 timer1.Start();
 
@@ -750,7 +750,7 @@ namespace trtlOCM
             addressRb.Checked = true;
             raindanceRb.Checked = false;
 
-            trtlOCM.Properties.Settings.Default.savedAddress = addressTb.Text;
+            nbxOCM.Properties.Settings.Default.savedAddress = addressTb.Text;
         }
 
         private void advancedCheck_CheckedChanged(object sender, EventArgs e)
@@ -784,7 +784,7 @@ namespace trtlOCM
         {
             timer1.Interval = (int)refreshTimeNum.Value * 1000;
 
-            trtlOCM.Properties.Settings.Default.statsSecs = (int)refreshTimeNum.Value;
+            nbxOCM.Properties.Settings.Default.statsSecs = (int)refreshTimeNum.Value;
         }
 
         private void poolStatsUpdateCb_CheckedChanged(object sender, EventArgs e)
@@ -817,7 +817,7 @@ namespace trtlOCM
                 cpuUsageNum.Enabled = false;
             }
 
-            trtlOCM.Properties.Settings.Default.minerPreference = minerSelectionCb.SelectedIndex;
+            nbxOCM.Properties.Settings.Default.minerPreference = minerSelectionCb.SelectedIndex;
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -830,47 +830,47 @@ namespace trtlOCM
 
         private void cpuMiningCheck_CheckedChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.cpuCb = cpuMiningCheck.Checked;
+            nbxOCM.Properties.Settings.Default.cpuCb = cpuMiningCheck.Checked;
         }
 
         private void gpuMiningCheck_CheckedChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.gpuCb = gpuMiningCheck.Checked;
+            nbxOCM.Properties.Settings.Default.gpuCb = gpuMiningCheck.Checked;
         }
 
         private void amdMiningCheck_CheckedChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.amdCb = amdMiningCheck.Checked;
+            nbxOCM.Properties.Settings.Default.amdCb = amdMiningCheck.Checked;
         }
 
         private void nvidiaMiningCheck_CheckedChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.nvCb = nvidiaMiningCheck.Checked;
+            nbxOCM.Properties.Settings.Default.nvCb = nvidiaMiningCheck.Checked;
         }
 
         private void hardwareCb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.hwType = hardwareCb.SelectedIndex;
+            nbxOCM.Properties.Settings.Default.hwType = hardwareCb.SelectedIndex;
         }
 
         private void writeLogCheck_CheckedChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.logCb = writeLogCheck.Checked;
+            nbxOCM.Properties.Settings.Default.logCb = writeLogCheck.Checked;
         }
 
         private void showCLICheck_CheckedChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.cliCb = showCLICheck.Checked;
+            nbxOCM.Properties.Settings.Default.cliCb = showCLICheck.Checked;
         }
 
         private void cpuUsageNum_ValueChanged(object sender, EventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.cpuPerc = (int)cpuUsageNum.Value;
+            nbxOCM.Properties.Settings.Default.cpuPerc = (int)cpuUsageNum.Value;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            trtlOCM.Properties.Settings.Default.Save();
+            nbxOCM.Properties.Settings.Default.Save();
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -880,42 +880,42 @@ namespace trtlOCM
                 return;
             }
 
-            trtlOCM.Properties.Settings.Default.savedPools = "";
-            trtlOCM.Properties.Settings.Default.savedAddress = "";
-            trtlOCM.Properties.Settings.Default.cpuCb = true;
-            trtlOCM.Properties.Settings.Default.nvCb = false;
-            trtlOCM.Properties.Settings.Default.amdCb = false;
-            trtlOCM.Properties.Settings.Default.gpuCb = true;
-            trtlOCM.Properties.Settings.Default.cpuPerc = 100;
-            trtlOCM.Properties.Settings.Default.hwType = 0;
-            trtlOCM.Properties.Settings.Default.statsSecs = 10;
-            trtlOCM.Properties.Settings.Default.logCb = false;
-            trtlOCM.Properties.Settings.Default.cliCb = false;
-            trtlOCM.Properties.Settings.Default.minerPreference = 0;
-            trtlOCM.Properties.Settings.Default.poolPreference = 0;
-            trtlOCM.Properties.Settings.Default.xmrigCPUpath = @"xmrig.exe";
-            trtlOCM.Properties.Settings.Default.xmrigAMDpath = @"xmrig-amd.exe";
-            trtlOCM.Properties.Settings.Default.xmrigNVpath = @"xmrig-nvidia.exe";
-            trtlOCM.Properties.Settings.Default.xmrstakpath = @"xmr-stak.exe";
+            nbxOCM.Properties.Settings.Default.savedPools = "";
+            nbxOCM.Properties.Settings.Default.savedAddress = "";
+            nbxOCM.Properties.Settings.Default.cpuCb = true;
+            nbxOCM.Properties.Settings.Default.nvCb = false;
+            nbxOCM.Properties.Settings.Default.amdCb = false;
+            nbxOCM.Properties.Settings.Default.gpuCb = true;
+            nbxOCM.Properties.Settings.Default.cpuPerc = 100;
+            nbxOCM.Properties.Settings.Default.hwType = 0;
+            nbxOCM.Properties.Settings.Default.statsSecs = 10;
+            nbxOCM.Properties.Settings.Default.logCb = false;
+            nbxOCM.Properties.Settings.Default.cliCb = false;
+            nbxOCM.Properties.Settings.Default.minerPreference = 0;
+            nbxOCM.Properties.Settings.Default.poolPreference = 0;
+            nbxOCM.Properties.Settings.Default.xmrigCPUpath = @"xmrig.exe";
+            nbxOCM.Properties.Settings.Default.xmrigAMDpath = @"xmrig-amd.exe";
+            nbxOCM.Properties.Settings.Default.xmrigNVpath = @"xmrig-nvidia.exe";
+            nbxOCM.Properties.Settings.Default.xmrstakpath = @"xmr-stak.exe";
 
 
-            addressTb.Text = trtlOCM.Properties.Settings.Default.savedAddress;
-            cpuMiningCheck.Checked = trtlOCM.Properties.Settings.Default.cpuCb;
-            nvidiaMiningCheck.Checked = trtlOCM.Properties.Settings.Default.nvCb;
-            amdMiningCheck.Checked = trtlOCM.Properties.Settings.Default.amdCb;
-            gpuMiningCheck.Checked = trtlOCM.Properties.Settings.Default.gpuCb;
-            cpuUsageNum.Value = trtlOCM.Properties.Settings.Default.cpuPerc;
-            hardwareCb.SelectedIndex = trtlOCM.Properties.Settings.Default.hwType;
-            refreshTimeNum.Value = trtlOCM.Properties.Settings.Default.statsSecs;
-            writeLogCheck.Checked = trtlOCM.Properties.Settings.Default.logCb;
-            showCLICheck.Checked = trtlOCM.Properties.Settings.Default.cliCb;
-            minerSelectionCb.SelectedIndex = trtlOCM.Properties.Settings.Default.minerPreference;
-            selectionModeCb.SelectedIndex = trtlOCM.Properties.Settings.Default.poolPreference;
+            addressTb.Text = nbxOCM.Properties.Settings.Default.savedAddress;
+            cpuMiningCheck.Checked = nbxOCM.Properties.Settings.Default.cpuCb;
+            nvidiaMiningCheck.Checked = nbxOCM.Properties.Settings.Default.nvCb;
+            amdMiningCheck.Checked = nbxOCM.Properties.Settings.Default.amdCb;
+            gpuMiningCheck.Checked = nbxOCM.Properties.Settings.Default.gpuCb;
+            cpuUsageNum.Value = nbxOCM.Properties.Settings.Default.cpuPerc;
+            hardwareCb.SelectedIndex = nbxOCM.Properties.Settings.Default.hwType;
+            refreshTimeNum.Value = nbxOCM.Properties.Settings.Default.statsSecs;
+            writeLogCheck.Checked = nbxOCM.Properties.Settings.Default.logCb;
+            showCLICheck.Checked = nbxOCM.Properties.Settings.Default.cliCb;
+            minerSelectionCb.SelectedIndex = nbxOCM.Properties.Settings.Default.minerPreference;
+            selectionModeCb.SelectedIndex = nbxOCM.Properties.Settings.Default.poolPreference;
 
             poolListPanel.Controls.Clear();
             initPools();
 
-            trtlOCM.Properties.Settings.Default.Save();
+            nbxOCM.Properties.Settings.Default.Save();
         }
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -1,4 +1,4 @@
-namespace trtlOCM
+namespace nbxOCM
 {
     partial class Form1
     {
@@ -209,7 +209,7 @@ namespace trtlOCM
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::trtlOCM.Properties.Resources.nibbleclassic_symbol_color;
+            this.pictureBox1.BackgroundImage = global::nbxOCM.Properties.Resources.nibbleclassic_symbol_color;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(10, 8);
@@ -592,7 +592,7 @@ namespace trtlOCM
             this.writeLogFileTb.Name = "writeLogFileTb";
             this.writeLogFileTb.Size = new System.Drawing.Size(239, 22);
             this.writeLogFileTb.TabIndex = 9;
-            this.writeLogFileTb.Text = "trtlminer.log";
+            this.writeLogFileTb.Text = "nbxminer.log";
             this.writeLogFileTb.Visible = false;
             // 
             // cpuLowPowerCheck

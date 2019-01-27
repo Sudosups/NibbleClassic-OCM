@@ -1,4 +1,4 @@
-﻿namespace trtlOCM
+﻿namespace nbxOCM
 {
     partial class PoolEntry
     {
