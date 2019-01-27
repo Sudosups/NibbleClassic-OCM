@@ -658,8 +658,16 @@ namespace trtlOCM
                         string cnt = nvidia_json.Substring(nvidia_json.IndexOf(@"""pool"":")).Split(':')[1].Split(',')[0];
                         connectedto += connectedto == cnt ? "" : cnt;
                     }
+                    hashrate = hashrate / 100;
 
-                    hashrateLbl.Text = "Stats - Hashrate: " +  (hashrate / 100.0).ToString() + " H/s";
+                    if (hashrate> 1000)
+                    {
+                        hashrateLbl.Text = "Stats - Hashrate: " + (hashrate/ 1000).ToString("0.00") + " KH/s";
+                    }
+                    else
+                    {
+                        hashrateLbl.Text = "Stats - Hashrate: " + hashrate.ToString() + " H/s";
+                    }
                     double sh_perc = ((double)shares / (double)shares_total) * 100.0;
                     shareCountLbl.Text = "Shares: " + shares.ToString() + " / " + shares_total.ToString() + " (" + sh_perc.ToString() + "%)";
                     bestShareLbl.Text = "Best: " + best.ToString();
@@ -671,7 +679,21 @@ namespace trtlOCM
                     WebClient w = new WebClient();
 
                     string hashrate = w.DownloadString("http://localhost:6777/h");
-                    hashrate = "Stats - Hashrate: " + (hashrate.Substring(hashrate.IndexOf("Totals:</th><td>")).Split('>')[2]).Split('<')[0] + " H/s";
+                    double d_hashrate = 0;
+                    
+                    Double.TryParse((hashrate.Substring(hashrate.IndexOf("Totals:</th><td>")).Split('>')[2]).Split('<')[0].Split('.')[0].Split(',')[0], out d_hashrate);
+                     
+
+
+                    if (d_hashrate > 1000)
+                    {
+                        hashrate = "Stats - Hashrate: " + (d_hashrate/1000).ToString("0.00") + " KH/s";
+                    }
+                    else
+                    {
+                        hashrate = "Stats - Hashrate: " + d_hashrate.ToString() + " H/s";
+                    }
+                    
                     hashrateLbl.Text = hashrate;
                     
                     string resultPage = w.DownloadString("http://localhost:6777/r");
@@ -841,10 +863,10 @@ namespace trtlOCM
             trtlOCM.Properties.Settings.Default.cliCb = false;
             trtlOCM.Properties.Settings.Default.minerPreference = 0;
             trtlOCM.Properties.Settings.Default.poolPreference = 0;
-            trtlOCM.Properties.Settings.Default.xmrigCPUpath = @"miners\xmrig\xmrig.exe";
-            trtlOCM.Properties.Settings.Default.xmrigAMDpath = @"miners\xmrigamd\xmrig-amd.exe";
-            trtlOCM.Properties.Settings.Default.xmrigNVpath = @"miners\xmrignvidia\xmrig-nvidia.exe";
-            trtlOCM.Properties.Settings.Default.xmrstakpath = @"miners\xmr-stak\xmr-stak.exe";
+            trtlOCM.Properties.Settings.Default.xmrigCPUpath = @"xmrig.exe";
+            trtlOCM.Properties.Settings.Default.xmrigAMDpath = @"xmrig-amd.exe";
+            trtlOCM.Properties.Settings.Default.xmrigNVpath = @"xmrig-nvidia.exe";
+            trtlOCM.Properties.Settings.Default.xmrstakpath = @"xmr-stak.exe";
 
 
             addressTb.Text = trtlOCM.Properties.Settings.Default.savedAddress;

@@ -129,7 +129,7 @@ namespace trtlOCM
             this.label1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
             this.label1.Size = new System.Drawing.Size(346, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NibbleBox v3.0";
+            this.label1.Text = "NibbleBox v3.1";
             // 
             // panel1
             // 
@@ -375,7 +375,7 @@ namespace trtlOCM
             });
             this.hardwareCb.Location = new System.Drawing.Point(350, 49);
             this.hardwareCb.Name = "hardwareCb";
-            this.hardwareCb.Size = new System.Drawing.Size(165, 28);
+            this.hardwareCb.Size = new System.Drawing.Size(180, 28);
             this.hardwareCb.TabIndex = 6;
             this.hardwareCb.Text = "Low end";
             this.hardwareCb.SelectedIndexChanged += new System.EventHandler(this.hardwareCb_SelectedIndexChanged);
@@ -383,11 +383,11 @@ namespace trtlOCM
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(400, 25);
+            this.label4.Location = new System.Drawing.Point(240, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 20);
+            this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Hardware type";
+            this.label4.Text = "Match Hardware/Pool with pool selection:";
             // 
             // addressTb
             // 
@@ -1056,7 +1056,7 @@ namespace trtlOCM
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "NibbleBox v3.0";
+            this.Text = "NibbleBox v3.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
