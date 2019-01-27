@@ -1,37 +1,45 @@
 {
-    "POOLS" : [
-    
-  {
-  "name" :	"NBXPool.com",
-  "url" :	"https://nbxpool.com/",
-  "api" :	"https://nbxpool.com:8119/",
-  "type" :	"forknote",
-  "miningAddress" :	"nbxpool.com"
-  },
-    {
+	"POOLS" : [
+	{
+	"name" : "NBXPool.com",
+	"url" : "https://nbxpool.com/",
+	"api" : "https://nbxpool.com:8119/",
+	"type" : "forknote",
+	"miningAddress" : "nbxpool.com",
+	"miningPortLow" : "3333",
+	"miningPortMid" : "4444",
+	"miningPortHigh" : "5555"
+	},
+	{
+	"name" :"Hackerknowledge.de",
+	"url" : "https://nbx.hackerknowledge.de/",
+	"api" : "https://pool.nbx.hackerknowledge.de:8119/",
+	"type" : "forknote",
+	"miningAddress" : "pool.nbx.hackerknowledge.de",
+	"miningPortLow" : "5151",
+	"miningPortMid" : "5252",
+	"miningPortHigh" : "5353"
+	},
+	{
+	"name" : "Llama & Horse",
+	"url" : "https://nbx.llama.horse/",
+	"api" : "http://pool.llama.horse:17124/",
+	"type" : "forknote",
+	"miningAddress" : "pool.llama.horse",
+	"miningPortLow" : "10103",
+	"miningPortMid" : "10104",
+	"miningPortHigh" : "10105"
+	},
+	{
+	"name" : "cryptonight.mine.nu",
+	"url" : "https://nbx.cryptonight.mine.nu/",
+	"api" : "https://nbx.cryptonight.mine.nu:8119/",
+	"type" : "forknote",
+	"miningAddress" : "nbx.cryptonight.mine.nu",
+	"miningPortLow" : "3332",
+	"miningPortMid" : "4442",
+	"miningPortHigh" : "5552"
+	}
 
-  "name" :	"Hackerknowledge.de",
-  "url" :	"https://nbx.hackerknowledge.de/",
-  "api"	: "https://pool.nbx.hackerknowledge.de:8119/",
-  "type" :	"forknote",
-  "miningAddress" :	"pool.nbx.hackerknowledge.de"
-  },
-    {
-
-  "name" :	"Llama & Horse",
-  "url"	: "https://nbx.llama.horse/",
-  "api"	: "http://pool.llama.horse:17124/",
-  "type" :	"forknote",
-  "miningAddress" :	"pool.llama.horse"
-  },
-    {
-
-  "name" :	"cryptonight.mine.nu",
-  "url"	: "https://nbx.cryptonight.mine.nu/",
-  "api" :	"https://nbx.cryptonight.mine.nu:8119/",
-  "type" : "forknote",
-  "miningAddress" :	"nbx.cryptonight.mine.nu"
-    }
-    ]
-  }
-  
+	]
+}
