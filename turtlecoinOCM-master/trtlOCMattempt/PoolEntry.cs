@@ -33,8 +33,20 @@ namespace trtlOCM
 
         private void PoolEntry_Load(object sender, EventArgs e)
         {
+
             addressLbl.Text = address;
+            this.addressLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addressLbl_LinkClicked);
             updateStatsTimer.Start();
+        }
+
+
+        private void addressLbl_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
+        {
+            // Specify that the link was visited.
+            this.addressLbl.LinkVisited = true;
+
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start(this.address);
         }
 
         public async void UpdateStats()

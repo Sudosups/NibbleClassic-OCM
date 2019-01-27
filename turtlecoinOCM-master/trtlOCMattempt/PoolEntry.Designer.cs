@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.selectedCb = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.addressLbl = new System.Windows.Forms.Label();
+            this.addressLbl = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.pingLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -222,7 +222,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label addressLbl;
+        private System.Windows.Forms.LinkLabel addressLbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label pingLbl;
         private System.Windows.Forms.Label label5;
