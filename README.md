@@ -1,4 +1,4 @@
-# NibbleBox 
+# NibbleBox ![logo_small_flat](https://github.com/Sudosups/NibbleBox/raw/master/nbxOCMattempt/Resources/nibbleclassic_symbol_color.png)
 One click miner GUI for xmrig and xmr-stak to specifically mine [NibbleClassic](https://nibble-nibble.com)
 
 ## What this program does
