@@ -77,6 +77,7 @@
             this.addressLbl.Padding = new System.Windows.Forms.Padding(0, 9, 0, 0);
             this.addressLbl.Size = new System.Drawing.Size(13, 22);
             this.addressLbl.TabIndex = 2;
+            this.addressLbl.TabStop = true;
             this.addressLbl.Text = "0";
             // 
             // label3

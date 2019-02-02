@@ -97,6 +97,7 @@ namespace nbxOCM
             this.poolStatsUpdateCb = new System.Windows.Forms.CheckBox();
             this.poolListPanel = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -236,7 +237,7 @@ namespace nbxOCM
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(515, 10);
+            this.linkLabel5.Location = new System.Drawing.Point(522, 6);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(16, 20);
             this.linkLabel5.TabIndex = 4;
@@ -301,6 +302,7 @@ namespace nbxOCM
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.linkLabel9);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.linkLabel7);
             this.panel3.Controls.Add(this.nvidiaMiningCheck);
@@ -320,6 +322,7 @@ namespace nbxOCM
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(544, 218);
             this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label15
             // 
@@ -334,7 +337,7 @@ namespace nbxOCM
             // linkLabel7
             // 
             this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(515, 10);
+            this.linkLabel7.Location = new System.Drawing.Point(522, 3);
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.Size = new System.Drawing.Size(16, 20);
             this.linkLabel7.TabIndex = 4;
@@ -366,7 +369,7 @@ namespace nbxOCM
             // 
             // refreshTimeNum
             // 
-            this.refreshTimeNum.Location = new System.Drawing.Point(434, 133);
+            this.refreshTimeNum.Location = new System.Drawing.Point(453, 133);
             this.refreshTimeNum.Maximum = new decimal(new int[] {
             60,
             0,
@@ -390,7 +393,7 @@ namespace nbxOCM
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(298, 135);
+            this.label3.Location = new System.Drawing.Point(314, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(217, 20);
             this.label3.TabIndex = 8;
@@ -405,7 +408,7 @@ namespace nbxOCM
             "High end"});
             this.hardwareCb.Location = new System.Drawing.Point(350, 49);
             this.hardwareCb.Name = "hardwareCb";
-            this.hardwareCb.Size = new System.Drawing.Size(180, 28);
+            this.hardwareCb.Size = new System.Drawing.Size(184, 28);
             this.hardwareCb.TabIndex = 6;
             this.hardwareCb.Text = "Low end";
             this.hardwareCb.SelectedIndexChanged += new System.EventHandler(this.hardwareCb_SelectedIndexChanged);
@@ -425,7 +428,7 @@ namespace nbxOCM
             this.addressTb.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.addressTb.Location = new System.Drawing.Point(24, 101);
             this.addressTb.Name = "addressTb";
-            this.addressTb.Size = new System.Drawing.Size(491, 27);
+            this.addressTb.Size = new System.Drawing.Size(510, 27);
             this.addressTb.TabIndex = 4;
             this.addressTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -1039,6 +1042,17 @@ namespace nbxOCM
             this.label10.TabIndex = 2;
             this.label10.Text = "Pool selection";
             // 
+            // linkLabel9
+            // 
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.Location = new System.Drawing.Point(428, 78);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(110, 20);
+            this.linkLabel9.TabIndex = 11;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "Need a Wallet?";
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1152,6 +1166,7 @@ namespace nbxOCM
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.LinkLabel linkLabel9;
     }
 }
 
