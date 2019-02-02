@@ -1,5 +1,5 @@
-# NibbleBox 
-One click miner GUI for xmrig and xmr-stak to specifically mine NibbleClassic
+# NibbleBox ![logo_small_flat](https://github.com/Sudosups/NibbleBox/raw/master/nbxOCMattempt/Resources/nibbleclassic_symbol_color.png)
+One click miner GUI for xmrig and xmr-stak to specifically mine [NibbleClassic](https://nibble-nibble.com)
 
 ## What this program does
 NibbleBox is a GUI for the cryptonight mining software `xmrig` by @psychocrypt `xmr-stak` by @fireice-uk  

@@ -39,6 +39,16 @@
 	"miningPortLow" : "3332",
 	"miningPortMid" : "4442",
 	"miningPortHigh" : "5552"
+	},
+	{
+	"name" : "nibbleclassic.my-mining-pool.de",
+	"url" : "https://nibbleclassic.my-mining-pool.de/",
+	"api" : "https://apinibbleclassic.my-mining-pool.de/",
+	"type" : "forknote",
+	"miningAddress" : "nibbleclassic.my-mining-pool.de",
+	"miningPortLow" : "13333",
+	"miningPortMid" : "13555",
+	"miningPortHigh" : "13777"
 	}
 
 	]
