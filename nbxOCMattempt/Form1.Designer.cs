@@ -331,7 +331,7 @@ namespace nbxOCM
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(170, 20);
             this.label15.TabIndex = 10;
-            this.label15.Text = "Mine to address (NBX...):";
+            this.label15.Text = "Mine to address (Nib...):";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // linkLabel7
