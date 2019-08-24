@@ -130,7 +130,7 @@ namespace nbxOCM
             this.label1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
             this.label1.Size = new System.Drawing.Size(213, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NibbleBox v3.2";
+            this.label1.Text = "NibbleBox v3.3";
             // 
             // panel1
             // 
