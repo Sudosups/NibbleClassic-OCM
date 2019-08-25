@@ -1,25 +1,6 @@
 {
 	"POOLS" : [
-	{
-	"name" : "NBXPool.com",
-	"url" : "https://nbxpool.com/",
-	"api" : "https://nbxpool.com:8119/",
-	"type" : "forknote",
-	"miningAddress" : "nbxpool.com",
-	"miningPortLow" : "3333",
-	"miningPortMid" : "4444",
-	"miningPortHigh" : "5555"
-	},
-	{
-	"name" :"Hackerknowledge.de",
-	"url" : "https://nbx.hackerknowledge.de/",
-	"api" : "https://pool.nbx.hackerknowledge.de:8119/",
-	"type" : "forknote",
-	"miningAddress" : "pool.nbx.hackerknowledge.de",
-	"miningPortLow" : "5151",
-	"miningPortMid" : "5252",
-	"miningPortHigh" : "5353"
-	},
+
 	{
 	"name" : "Llama & Horse",
 	"url" : "https://nbx.llama.horse/",
