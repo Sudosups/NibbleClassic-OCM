@@ -50,7 +50,7 @@
 	"miningPortMid" : "13555",
 	"miningPortHigh" : "13777"
 	},
-		    {
+	{
     "name" : "cnpool.cc",
     "url" : "https://cnpool.cc/nbx/",
     "api" : "https://cnpool.cc/api/nbx",
