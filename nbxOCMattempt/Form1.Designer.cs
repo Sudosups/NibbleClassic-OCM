@@ -991,7 +991,7 @@ namespace nbxOCM
             this.selectionModeCb.Name = "selectionModeCb";
             this.selectionModeCb.Size = new System.Drawing.Size(155, 28);
             this.selectionModeCb.TabIndex = 6;
-            this.selectionModeCb.Text = "lower ping";
+            this.selectionModeCb.Text = "manual selection";
             this.selectionModeCb.SelectedIndexChanged += new System.EventHandler(this.AnalyzePoolsByCondition);
             // 
             // label12
