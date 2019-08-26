@@ -21,6 +21,16 @@
 	"miningPortMid" : "4442",
 	"miningPortHigh" : "5552"
 	},
+			{
+	"name" : "webnbx.semipool.com",
+	"url" : "https://webnbx.semipool.com/#/dashboard",
+	"api" : "  ",
+	"type" : "forknote",
+	"miningAddress" : "pool.semipool.com",
+	"miningPortLow" : "22278",
+	"miningPortMid" : "33378",
+	"miningPortHigh" : "44478"
+	},
 	{
 	"name" : "nibbleclassic.my-mining-pool.de",
 	"url" : "https://nibbleclassic.my-mining-pool.de/",
