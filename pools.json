@@ -23,9 +23,9 @@
 	},
 	{
 	"name" : "webnbx.semipool.com",
-	"url" : "https://webnbx.semipool.com/#/dashboard",
-	"api" : "  ",
-	"type" : "forknote",
+	"url" : "https://webnbx.semipool.com/",
+	"api" : "https://webnbx.semipool.com/api",
+	"type" : "node.js",
 	"miningAddress" : "pool.semipool.com",
 	"miningPortLow" : "22278",
 	"miningPortMid" : "33378",
