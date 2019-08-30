@@ -42,6 +42,15 @@
 	"miningPortHigh" : "13777"
 	},
 	{
+    "name" : "FastPooL.XyZ",
+    "url" : "https://fastpool.xyz/nbx",
+    "api" : "https://backup.fastpool.xyz:10034/",
+    "type" : "node.js",
+    "miningAddress" : "fastpool.xyz",
+    "miningPortLow" : "10031",
+    "miningPortMid" : "10032"
+    },
+	{
     "name" : "cnpool.cc",
     "url" : "https://cnpool.cc/nbx/",
     "api" : "https://cnpool.cc/api/nbx",
