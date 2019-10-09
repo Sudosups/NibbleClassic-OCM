@@ -9,7 +9,7 @@ namespace nbxOCM
     static class Program
     {
 
-        static public String version = "3.3";
+        static public String version = "4.0";
 
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
