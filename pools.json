@@ -1,26 +1,8 @@
 {
 	"POOLS" : [
 
-	{
-	"name" : "Llama & Horse",
-	"url" : "https://nbx.llama.horse/",
-	"api" : "http://pool.llama.horse:17124/",
-	"type" : "forknote",
-	"miningAddress" : "pool.llama.horse",
-	"miningPortLow" : "10103",
-	"miningPortMid" : "10104",
-	"miningPortHigh" : "10105"
-	},
-	{
-	"name" : "cryptonight.mine.nu",
-	"url" : "https://nbx.cryptonight.mine.nu/",
-	"api" : "https://nbx.cryptonight.mine.nu:8119/",
-	"type" : "forknote",
-	"miningAddress" : "nbx.cryptonight.mine.nu",
-	"miningPortLow" : "3332",
-	"miningPortMid" : "4442",
-	"miningPortHigh" : "5552"
-	},
+
+
 	{
 	"name" : "webnbx.semipool.com",
 	"url" : "https://webnbx.semipool.com/",
