@@ -130,7 +130,7 @@ namespace nbxOCM
             this.label1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
             this.label1.Size = new System.Drawing.Size(213, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NibbleBox v3.3";
+            this.label1.Text = "NibbleBox v4.0";
             // 
             // panel1
             // 
@@ -156,7 +156,7 @@ namespace nbxOCM
             this.minerSelectionCb.Items.AddRange(new object[] {
             "XMRig",
             "XMR-stak"});
-            this.minerSelectionCb.Location = new System.Drawing.Point(133, 57);
+            this.minerSelectionCb.Location = new System.Drawing.Point(220, 57);
             this.minerSelectionCb.Name = "minerSelectionCb";
             this.minerSelectionCb.Size = new System.Drawing.Size(121, 28);
             this.minerSelectionCb.TabIndex = 3;
@@ -214,7 +214,7 @@ namespace nbxOCM
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(10, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(142, 83);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -1066,7 +1066,7 @@ namespace nbxOCM
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "NibbleBox v3.3";
+            this.Text = "NibbleBox v4.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
