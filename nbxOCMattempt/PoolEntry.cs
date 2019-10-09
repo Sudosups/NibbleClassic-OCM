@@ -76,7 +76,7 @@ namespace nbxOCM
                 else if (res.Status == IPStatus.TimedOut)
                 {
                     ping = 999;
-                    pingLbl.Text = ping.ToString() + " ms";
+                    pingLbl.Text = ping.ToString() + " POOL NOT IN USE";
 
                 }
                 else
@@ -86,7 +86,7 @@ namespace nbxOCM
 
                     try
                     {
-               //         this.Parent.Controls.Remove(this);
+                        this.Parent.Controls.Remove(this);
                     }
                     catch { }
                 }
@@ -98,7 +98,7 @@ namespace nbxOCM
 
                 try
                 {
-                //    this.Parent.Controls.Remove(this);
+                    this.Parent.Controls.Remove(this);
                 }
                 catch { }
             }
