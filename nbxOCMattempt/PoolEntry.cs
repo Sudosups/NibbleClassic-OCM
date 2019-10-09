@@ -86,7 +86,7 @@ namespace nbxOCM
 
                     try
                     {
-                        this.Parent.Controls.Remove(this);
+               //         this.Parent.Controls.Remove(this);
                     }
                     catch { }
                 }
@@ -98,7 +98,7 @@ namespace nbxOCM
 
                 try
                 {
-                    this.Parent.Controls.Remove(this);
+                //    this.Parent.Controls.Remove(this);
                 }
                 catch { }
             }
@@ -130,7 +130,7 @@ namespace nbxOCM
 
                 try
                 {
-                    this.Parent.Controls.Remove(this);
+                //    this.Parent.Controls.Remove(this);
                 }
                 catch { }
             }
@@ -239,7 +239,7 @@ namespace nbxOCM
 
         private void label13_Click(object sender, EventArgs e)
         {
-            this.Parent.Controls.Remove(this);
+        //    this.Parent.Controls.Remove(this);
         }
 
         private void selectedCb_CheckedChanged(object sender, EventArgs e)
